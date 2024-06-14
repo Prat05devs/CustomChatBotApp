@@ -1,0 +1,558 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 20px 5px;
+  background-color: #2a2a2a; /* Dark background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-name {
+  font-size: 1.5em;
+  color: #ffffff; /* White color for logo text */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  margin: 0 15px;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555; /* Darker background color on hover */
+  color: #fff;
+}
+
+/* Chat Window Styles */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  height: 90vh;
+}
+
+.message-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.user-message,
+.bot-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  max-width: 70%;
+}
+
+.user-message {
+  background-color: #876690;
+  color: #ffffff;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #f1f1f1;
+  color: #333333;
+  align-self: flex-start;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #5c9eff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4c8bdc;
+}
+
+.user-message img,
+.bot-message img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.file-input-label {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.file-input-icon {
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
+}
+
+
+/* Landing Page Styles */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #EFFFFD;
+  padding: 50px;
+}
+
+/* Landing Page Styles */
+.landing-page .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  background-color: #2a2a2a; /* Dark background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-page .app-name {
+  font-size: 1.5em;
+  color: #ffffff; /* White color for logo text */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px; /* Add margin to create space between app name and links */
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.landing-page .navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page .nav-link {
+  margin: 0 15px;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.landing-page .nav-link:hover {
+  background-color: #555; /* Darker background color on hover */
+  color: #fff;
+}
+
+/* Adjust the overall width of the navbar */
+.landing-page .navbar {
+  width: 100%;
+}
+
+/* Effect when scrolling */
+.landing-page .navbar.scrolled {
+  background-color: #1a1a1a; /* Darker background when scrolled */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow when scrolled */
+}
+
+.landing-page .app-name.scrolled {
+  color: #ffd700; /* Change color of app name when scrolled */
+}
+
+.landing-page .nav-link.scrolled {
+  color: #ffd700; /* Change color of nav links when scrolled */
+}
+
+.landing-page .navbar-links.scrolled .nav-link:hover {
+  background-color: #333; /* Darker background color on hover when scrolled */
+}
+
+
+/* About Page Styles */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #EFFFFD;
+  padding: 50px;
+}
+
+/* Contact Page Styles */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #EFFFFD;
+  padding: 50px;
+}
+
+/* Navbar Styles for About and Contact Pages */
+.about-page .navbar,
+.contact-page .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  background-color: #2a2a2a; /* Dark background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page .app-name,
+.contact-page .app-name {
+  font-size: 1.5em;
+  color: #ffffff; /* White color for logo text */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px; /* Add margin to create space between app name and links */
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.about-page .navbar-links,
+.contact-page .navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-page .nav-link,
+.contact-page .nav-link {
+  margin: 0 15px;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-page .nav-link:hover,
+.contact-page .nav-link:hover {
+  background-color: #555; /* Darker background color on hover */
+  color: #fff;
+}
+
+/* Adjust the overall width of the navbar */
+.about-page .navbar,
+.contact-page .navbar {
+  width: 100%;
+}
+
+/* Effect when scrolling */
+.about-page .navbar.scrolled,
+.contact-page .navbar.scrolled {
+  background-color: #1a1a1a; /* Darker background when scrolled */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow when scrolled */
+}
+
+.about-page .app-name.scrolled,
+.contact-page .app-name.scrolled {
+  color: #ffd700; /* Change color of app name when scrolled */
+}
+
+.about-page .nav-link.scrolled,
+.contact-page .nav-link.scrolled {
+  color: #ffd700; /* Change color of nav links when scrolled */
+}
+
+.about-page .navbar-links.scrolled .nav-link:hover,
+.contact-page .navbar-links.scrolled .nav-link:hover {
+  background-color: #333; /* Darker background color on hover when scrolled */
+}
+
+
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+
+.try-chatbot-button {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.try-chatbot-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.try-chatbot-button:hover::before {
+  scale: 3;
+}
+
+.try-chatbot-button:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.try-chatbot-button:active {
+  scale: 1;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eee;
+  margin-top: 50px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  font-size: 1.5em;
+  margin-right: 8px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Additional styling for contact information */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.contact-info p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+/* Add hover effect for icons */
+.footer-icon:hover {
+  color: #555; /* Darker color on hover */
+}
+
+
+/*contact page*/
+
+/* Existing styles... */
+
+/* Contact Form Styles */
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  /* Adjust width as needed */
+  margin: auto;
+  padding: 5rem 1rem; /* Increased padding and removed border */
+  max-width: 600px; /* Set maximum width */
+}
+
+.contact-page .form-group {
+  margin: 50px 0px;
+}
+
+.contact-page label {
+  color: #691d1d; /* Set label color from your code */
+  margin: 1rem 0rem; /* Set label margin from your code */
+}
+
+
+
+.contact-page textarea {
+  resize: vertical; /* Allow textarea resizing */
+}
+
+.contact-page button {
+  padding: 8px 16px;
+  background-color: #086922; /* Blue background for button */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.contact-page button:hover {
+  background-color: #3c66c1;
+}
+
+.input {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: .8vw;
+  color: #fff;
+  background-color: rgb(28,28,30);
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  width: 600px; /* Ensure inputs/textarea stretch to full width */
+  padding: 10px 18px; /* Set padding from your code */
+  font-size: 1.2rem;
+  transition: .4s;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+
+/*button*/
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 15px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ }
+ 
+ button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ button:hover span {
+  padding-right: 15px;
+ }
+ 
+ button:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
